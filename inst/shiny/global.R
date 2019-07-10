@@ -1,4 +1,29 @@
 ## loading package
+
+if (!require("shiny"))
+    install.packages("shiny")  
+
+if (!require("reticulate"))
+    install.packages("reticulate")  
+
+if (!require("pylr"))
+    install.packages("pylr") 
+
+if (!require("VGAM"))
+    install.packages("VGAM") 
+
+if (!require("reshape2"))
+    install.packages("reshape2") 
+
+if (!require("ggplot2"))
+    install.packages("ggplot2") 
+
+if (!require("gplots"))
+    install.packages("gplots") 
+
+if (!require("colourpicker"))
+    install.packages("colourpicker") 
+
 require(cytofkit2)
 require(ggplot2)
 require(reshape2)
