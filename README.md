@@ -35,43 +35,20 @@ For Mac OS X 10.8 or later, you need to install XQuartz to support the GUI:
 
 #### 2. Install cytofkit2 package
 
-The offical and stable version, please refer to 
-
-- [Bioconductor](https://www.bioconductor.org/packages/cytofkit/)
-- [GitHub](https://github.com/JinmiaoChenLab/cytofkit2)
-
-Install the stable version from Bioconductor, use:
-
-``` r
-## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("cytofkit")
-```
-
-Install this development version, use:
+Installation :
 
 ``` r
 if(!require(devtools)){
   install.packages("devtools") # If not already installed
 }
-devtools::install_github("JinmiaoChenLab/cytofkit2")
+devtools::install_github("CPTPGenomicTranscriptomic/cytofkit2")
 ```
 
 ### Usage
 
-After successfully installing the cytofkit2 package, run the following codes to open the cytofkit GUI:
+After successfully installing the cytofkit2 package, you can copy/paste the following command lines in a Rstudio console to open the cytofkit GUI:
 
 ``` r
 library("cytofkit2")
 cytofkit_shiny_dashboard()
 ```
-
-<u>Check the following vignettes for more details:</u>
-
-- [cytofkit: Analysis Pipeline](https://www.bioconductor.org/packages/release/bioc/vignettes/cytofkit/inst/doc/cytofkit_workflow.html)    
-- [cytofkit: Quick Start](https://www.bioconductor.org/packages/release/bioc/vignettes/cytofkit/inst/doc/cytofkit_example.html)   
-- [cytofkit: ShinyAPP Tutorial](https://www.bioconductor.org/packages/release/bioc/vignettes/cytofkit/inst/doc/cytofkit_shinyAPP.html)    
-
-
-
-
