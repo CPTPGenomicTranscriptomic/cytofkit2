@@ -537,6 +537,8 @@ cytofkit_GUI <- function() {
         inputs[["tsne_perp"]] <- tclvalue(tsne_perp)
         inputs[["tsne_maxIter"]] <- tclvalue(tsne_maxIter)
         inputs[["FlowSOM_k"]] <- tclvalue(FlowSOM_k)
+        inputs[["tsne_perplexity"]] <- tclvalue(tsne_perplexity)
+        inputs[["tsne_iteration"]] <- tclvalue(tsne_iteration)
         inputs[["seed"]] <- tclvalue(seed)
         inputs[["projectName"]] <- tclvalue(projectName)
         inputs[["resultDir"]] <- tclvalue(resDir)
@@ -560,6 +562,8 @@ cytofkit_GUI <- function() {
                  progressionMethod = inputs[["progressionMethod"]],
                  Rphenograph_k = as.numeric(inputs[["Rphenograph_k"]]),
                  FlowSOM_k = as.numeric(inputs[["FlowSOM_k"]]),
+                 tsne_perplexity = as.numeric(inputs[["tsne_perplexity"]]),
+                 tsne_iteration = as.numeric(inputs[["tsne_iteration"]]),
                  seed = as.numeric(inputs[["seed"]]),
                  clusterSampleSize = 500,
                  resultDir = inputs[["resultDir"]],
