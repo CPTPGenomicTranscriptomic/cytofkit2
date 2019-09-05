@@ -141,6 +141,8 @@ cytofkit <- function(fcsFiles = getwd(),
                      progressionMethod = c("NULL", "diffusionmap", "isomap"),
                      Rphenograph_k = 30,
                      FlowSOM_k = 40,
+                     tsne_perplexity = 30,
+                     tsne_interation = 1000,
                      seed = NULL,
                      clusterSampleSize = 500,
                      resultDir = getwd(), 
@@ -241,6 +243,8 @@ cytofkit <- function(fcsFiles = getwd(),
                                 , markers = markers
                                 , umap_neighbor = umap_neighbor
                                 , umap_min_dist = umap_min_dist
+                                , tsne_perplexity = tsne_perplexity
+                                , tsne_iteration = tsne_iteration
                                 , tsneSeed = seed)
     names(allDimReducedList) <- alldimReductionMethods
     
