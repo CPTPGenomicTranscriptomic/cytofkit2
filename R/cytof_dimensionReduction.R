@@ -36,6 +36,8 @@ cytof_dimReduction <- function(data,
                                out_dim = 2,
                                umap_neighbor = 30,
                                umap_min_dist = 0.3,
+                               tsne_perplexity = 30,
+                               tsne_iteration = 1000,
                                tsneSeed = 42,
                                isomap_k = 5, 
                                isomap_ndim = NULL, 
@@ -88,7 +90,7 @@ cytof_dimReduction <- function(data,
                if(is.numeric(tsneSeed))
                    set.seed(tsneSeed) # Set a seed if you want reproducible results
                tsne_out <- Rtsne(marker_filtered_data, initial_dims = ncol(marker_filtered_data), 
-                                 dims = 2, 
+                                 dims = 2, perplexity = tsne_perplexity, max_iter = tsne_iteration,
                                  check_duplicates = FALSE, 
                                  pca = TRUE, ...)
                mapped <- tsne_out$Y
