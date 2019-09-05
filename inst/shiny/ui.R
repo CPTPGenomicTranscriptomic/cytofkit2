@@ -557,7 +557,7 @@ dr_panel = fluidPage(
                       , numericInput('tsne_perplexity', 'tSNE perplexity', value = 30)
            )
            , tags$div(title=''
-                      , numericInput('tsne_interation', 'tSNE Max Iterations', value = 1000)
+                      , numericInput('tsne_iteration', 'tSNE Max Iterations', value = 1000)
            )
            , tags$div(title=''
                       , numericInput('seed', 'Seed', value = 42))
