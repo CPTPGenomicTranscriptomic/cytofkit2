@@ -44,7 +44,8 @@ if(!require(devtools)){
 devtools::install_github("CPTPGenomicTranscriptomic/cytofkit2")
 ```
 
-### Usage
+
+#### 3. Launch the application
 
 After successfully installing the cytofkit2 package, you can copy/paste the following command lines in a Rstudio console to open the cytofkit GUI:
 
@@ -52,3 +53,35 @@ After successfully installing the cytofkit2 package, you can copy/paste the foll
 library("cytofkit2")
 cytofkit_shiny_dashboard()
 ```
+A webpage should be open and looking like this!
+
+![alt text](https://github.com/CPTPGenomicTranscriptomic/cytofkit2/blob/master/cytofkit2_interface.png)
+
+
+#### 4. Choose your analysis set up
+
+Upload from one to multiple \*.fcs files. The files must have the .fcs extension to appear in the selection browser.
+
+The blue progress bar should move until the message \"upload complete\" appears.
+
+The select your interesting markers.
+
+Update the project name to avoid the overwriting of older results.
+
+As you can upload multiple FCS files these files muste be merge before visualization. Choose between the 4 merge methods:
+ * ceil: which samples up to a user specified number of cells without replacement from each FCS file.
+ * all: which takes all cells from each FCS file.
+ * min: which samples the minimum number of cells among all the selected FCS files from each FCS file.
+ * fixed: which samples an user specified number of cells (with replacement when the total number of cell in the file is less than the specified number) from each FCS file.
+
+Choose between the 4 transformation methods:
+* cytofAsinh: transformed using either negative value pruned inverse hyperbolic sine transformation
+* autoLgcl: automatic logicle transformation.
+* Fixedlogicle: fixed logicle transformation.
+
+Submit. Wait for computation.
+
+Save results.
+
+Results visualization analysis.
+
