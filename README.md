@@ -41,6 +41,24 @@ Installation :
 if(!require(devtools)){
   install.packages("devtools") # If not already installed
 }
+if(!require(reticulate)){
+  install.packages("reticulate")
+}
+if(!require(plotly)){
+  install.packages("plotly")
+}
+if(!require(shinydashboard)){
+  install.packages("shinydashboard")
+}
+if(!require(shinyalert)){
+  install.packages("shinyalert")
+}
+if(!require(shinyWidgets)){
+  install.packages("shinyWidgets")
+}
+if(!require(plyr)){
+  install.packages("plyr")
+}
 devtools::install_github("CPTPGenomicTranscriptomic/cytofkit2")
 ```
 
