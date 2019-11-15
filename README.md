@@ -71,6 +71,7 @@ devtools::install_github("CPTPGenomicTranscriptomic/cytofkit2")
 After successfully installing the cytofkit2 package, you can copy/paste the following command lines in a Rstudio console to open the cytofkit GUI:
 
 ``` r
+library("umap")
 library("cytofkit2")
 cytofkit_shiny_dashboard()
 ```
