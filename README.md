@@ -59,6 +59,9 @@ if(!require(shinyWidgets)){
 if(!require(plyr)){
   install.packages("plyr")
 }
+if(!require(umap)){
+  install.packages("umap")
+}
 devtools::install_github("CPTPGenomicTranscriptomic/cytofkit2")
 ```
 
