@@ -13,7 +13,7 @@ library(shinyWidgets)
 # library(jsTree)
 
 # maximum size 10000MB
-options(shiny.maxRequestSize = 1024*1024*100*100) 
+options(shiny.maxRequestSize = 1024*1024*1000*100) 
 # plan('multicore')
 
 shinyServer = function(input, output, session)
