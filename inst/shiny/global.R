@@ -244,7 +244,7 @@ cytof_wrap_colorPlot <- function(data, xlab, ylab, markers, scaleMarker = FALSE,
 ## Heat Map
 heatMap <- function(data, clusterMethod = "DensVM", type = "mean", 
                     dendrogram = "both", colPalette = "bluered", selectSamples, selectMarkers = NULL,
-                    cex_row_label = 1, cex_col_label = 1, scaleMethod = "none") {
+                    cex_row_label = 1, cex_col_label = 1, scaleMethod = "both") {
   exprs <- data$expressionData
   samples <- sub("_[0-9]*$", "", row.names(exprs))
   if(!(is.null(selectMarkers))) {
