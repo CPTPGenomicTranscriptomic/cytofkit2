@@ -277,7 +277,7 @@ heatMap <- function(data, clusterMethod = "DensVM", type = "mean",
                 margins = c(8, 8), 
                 keysize = 1, 
                 key.par=list(mgp=c(1.5, 0.5, 0), mar=c(3, 2.5, 3.5, 1))) 
-  else{
+  }else{
     cytof_heatmap(data = as.matrix(cluster_stat), 
                 baseName = paste(clusterMethod, type), 
                 scaleMethod = scaleMethod, 
