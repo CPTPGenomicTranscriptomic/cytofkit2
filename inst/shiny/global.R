@@ -263,8 +263,22 @@ heatMap <- function(data, clusterMethod = "DensVM", type = "mean",
   cluster_stat <- cytof_clusterStat(data = exprs_cluster,
                                     cluster = "cluster", 
                                     statMethod = type)
-  
-  cytof_heatmap(data = as.matrix(cluster_stat), 
+    
+ if(scaleMethod == "both"){
+    x <- scale(as.matrix(cluster_stat)) # scale and center columns
+    x <- t(scale(t(x))) # scale and center rows
+     cytof_heatmap(data = x, 
+                baseName = paste(clusterMethod, type), 
+                scaleMethod = "none", 
+                dendrogram = dendrogram,
+                colPalette = colPalette,
+                cex_row_label = cex_row_label, 
+                cex_col_label = cex_col_label,
+                margins = c(8, 8), 
+                keysize = 1, 
+                key.par=list(mgp=c(1.5, 0.5, 0), mar=c(3, 2.5, 3.5, 1))) 
+  else{
+    cytof_heatmap(data = as.matrix(cluster_stat), 
                 baseName = paste(clusterMethod, type), 
                 scaleMethod = scaleMethod, 
                 dendrogram = dendrogram,
@@ -273,7 +287,8 @@ heatMap <- function(data, clusterMethod = "DensVM", type = "mean",
                 cex_col_label = cex_col_label,
                 margins = c(8, 8), 
                 keysize = 1, 
-                key.par=list(mgp=c(1.5, 0.5, 0), mar=c(3, 2.5, 3.5, 1))) 
+                key.par=list(mgp=c(1.5, 0.5, 0), mar=c(3, 2.5, 3.5, 1)))
+      }
 }
 
 ## density plot
