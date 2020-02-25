@@ -243,7 +243,7 @@ shiny_one_panel = fluidPage(
                                                 ),
                                                 column(2,
                                                        selectInput('M_scaleMethod', strong('Scale Data:'), 
-                                                                   choices = c("none", "row", "column"), 
+                                                                   choices = c("none", "row", "column", "both"), 
                                                                    selected = "none", width = "100%")
                                                 ),
                                                 column(2,
